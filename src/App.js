@@ -13,9 +13,7 @@ class App extends Component {
   componentDidMount() {
     fetch(process.env.REACT_APP_BACKEND_URL + '/api/v1/snacks')
       .then(data => data.json())
-      .then(data => this.setState({
-        data: data
-      }))
+      .then(data => this.setState({ data: data }))
       .catch(error => console.log(error))
   }
 
